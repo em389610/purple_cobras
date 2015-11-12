@@ -1,0 +1,153 @@
+<html>
+<head>
+<title>JavaScript Example of changing background colour with mouse positon</title>
+<style type = "text/css"></style>
+</head>
+<body style="cursor: default; background-color: rgb(204, 255, 204);">
+
+<canvas id="rectangle" width="200" height="50" style:"1px="" solid="" #333"=""></canvas>
+<script type="text/javascript">	
+
+	var isIE = document.all?true:false;
+	if (!isIE) document.captureEvents(Event.MOUSEMOVE);
+	document.onmousemove = getMousePosition;
+	
+	function getMousePosition(mp)
+	 {
+	   var xpos; 
+	   var ypos;
+	   
+	  if (!isIE)
+	   	{
+		 xpos=mp.pageX;
+		 ypos=mp.pageY;
+		}
+		
+	  if (isIE)
+	   	{
+		 xpos=event.clientX + document.body.scrollLeft;
+		 ypos=event.clientY + document.body.scrollTop;
+	   	}
+	  
+	  
+	/* changing background color on mouse movement*/  
+	var width;
+	var height;
+	//width = window.innerWidth;
+	height = window.innerHeight;
+	//document.write(window.innerWidth);
+	  if((ypos>0)&&(ypos<=(height/21)))
+	  { 
+		document.body.style.backgroundColor = "#660066";
+		document.body.style.cursor = "pointer";	  
+	  }
+	  else if((ypos>(height/21))&&(ypos<=(2*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="670667";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(2*(height/21)))&&(ypos<=(3*(height/21))))
+	  { document.body.style.backgroundColor="#680C68";
+	    document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(3*(height/21)))&&(ypos<=(4*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="691369";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(4*(height/21)))&&(ypos<=(5*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="6A1369";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(5*(height/21)))&&(ypos<=(6*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="6C1F6C";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(6*(height/21)))&&(ypos<=(7*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="6D256D";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(7*(height/21)))&&(ypos<=(8*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="6E2B6E";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(8*(height/21)))&&(ypos<=(9*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="6F326F";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(9*(height/21)))&&(ypos<=(10*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="703870";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(10*(height/21)))&&(ypos<=(11*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="713E71";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(11*(height/21)))&&(ypos<=(12*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="724472";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(12*(height/21)))&&(ypos<=(13*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="734A73";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(13*(height/21)))&&(ypos<=(14*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="745174";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(14*(height/21)))&&(ypos<=(15*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="755775";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(15*(height/21)))&&(ypos<=(16*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="765D76";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(16*(height/21)))&&(ypos<=(17*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="786378";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(17*(height/21)))&&(ypos<=(18*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="796979";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(18*(height/21)))&&(ypos<=(19*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="7A707A";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(19*(height/21)))&&(ypos<=(20*(height/21))))
+	  { 
+	  document.body.style.backgroundColor="7B767B";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else if((ypos>(20*(height/21)))&&(ypos<=height))
+	  { 
+	  document.body.style.backgroundColor="7C7C7C";
+	  document.body.style.cursor = "pointer";
+	  }
+	  else
+	  { //document.body.style.backgroundColor="white";
+	   document.body.style.cursor = "default";
+	   }
+	  return true;
+	}
+
+
+</script>
+</body>
+</html>

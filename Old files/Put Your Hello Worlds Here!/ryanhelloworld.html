@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<title>Purple Cobras Hello World</title>
+  <center>
+  <h1>Hello World!</h1>
+  <br><br><br> 
+  <button type="button" name="OnlyButton" onclick="helloagain()">Click Me!</button>
+  <br><br><br>
+  <iframe id="video" width="854" height="480" src="https://www.youtube.com/embed/s8MDNFaGfT4" frameborder="0" allowfullscreen></iframe>
+  </center>
+</body>
+<script>
+document.getElementById("video").style.visibility = "hidden";
+function helloagain() {
+    document.getElementById("video").style.visibility = "visible";
+	var video=document.getElementById("video");
+    video.volume=0.0;
+}
+</script>
+<style>
+body {
+    background-color: purple;
+}
+
+h1 {
+    color: white;
+    margin-left: 40px;
+	font-family: arial;
+}
+</style>
+
+</html>

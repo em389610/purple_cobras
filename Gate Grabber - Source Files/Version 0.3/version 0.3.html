@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+    <style>
+        * { padding: 0; margin: 0; }
+        canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="480" height="600"></canvas>
+
+<script>
+    var score = 0;
+    var previousFrameTime = 0;
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var ballRadius=10;
+    var upPressed = false;
+    var downPressed = false;
+    var rightPressed = false;
+    var leftPressed = false;
+
+    var ballX = canvas.width/2;
+    var ballY = canvas.height-30;
+    var gateX1 = canvas.width/4;
+    var gateX2 = 2*(canvas.width/4);
+    var gateX3 = 3*(canvas.width/4);
+    var gateY = -20;
+    var currentGate1 = 0;
+    var currentGate2 = 1;
+    var currentGate3 = 2;
+
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+
+    function keyDownHandler(e) {
+        if(e.keyCode == 39) {
+            rightPressed = true;
+        }
+        if(e.keyCode == 37) {
+            leftPressed = true;
+        }
+        if(e.keyCode == 38){
+            upPressed = true;
+
+        }
+        if(e.keyCode == 40){
+            downPressed = true;
+        }
+    }
+
+    function keyUpHandler(e) {
+        if(e.keyCode == 39) {
+            rightPressed = false;
+        }
+        if(e.keyCode == 37) {
+            leftPressed = false;
+        }
+        if(e.keyCode == 38){
+            upPressed = false;
+
+        }
+        if(e.keyCode == 40){
+            downPressed = false;
+        }
+    }
+    function drawBall(){
+        ctx.beginPath();
+        ctx.arc(ballX, ballY, ballRadius, 0, Math.PI*2);
+        ctx.fillStyle = "#00FF00";
+        ctx.fill();
+        ctx.closePath();
+
+    }
+    function drawGate(x, y, gate){
+
+
+        if(gate== 0){
+            ctx.beginPath();
+            ctx.rect(x,y, 40, 60);
+            ctx.fillStyle = "#0000FF";
+            ctx.fill();
+            ctx.closePath();  
+        }
+        else if(gate ==1){
+            ctx.beginPath();
+            ctx.rect(x,y, 40, 60);
+            ctx.fillStyle = "#FF0000";
+            ctx.fill();
+            ctx.closePath();
+        }
+        else if(gate ==2){
+            ctx.beginPath();
+            ctx.rect(x,y, 40, 60);
+            ctx.fillStyle = "#FFFF00";
+            ctx.fill();
+            ctx.closePath();
+        }
+        
+    }
+
+
+    function changeGate(){
+    
+    //V Change value of the first gate V
+    var temp = Math.floor(Math.random() * 3);
+    while(temp == currentGate1){
+        temp = Math.floor(Math.random() * 3);
+    }
+    currentGate1 = temp;
+    
+    //V change the value of the second gate V
+
+    temp = Math.floor(Math.random() * 3);
+    while(temp == currentGate2){
+        temp = Math.floor(Math.random() * 3);
+    }
+    currentGate2 = temp;
+
+    //V change the value of the third gate V
+
+    temp = Math.floor(Math.random() * 3);
+    while(temp == currentGate3){
+        temp = Math.floor(Math.random() * 3);
+    }
+    currentGate3 = temp;
+    
+
+    // if(currentGate1 == 0){
+    //     currentGate1 = 1;
+    // }
+    // else if(currentGate1 == 1){
+    //     currentGate1 = 2;
+    // }
+    // else{
+    //     currentGate1 = 0;
+    }
+
+
+    function draw(time) {
+        requestAnimationFrame(draw);
+        var scoreString = score.toString();
+        var FPS = Math.floor(1000 / (time - previousFrameTime));
+        var fpsSTRING = FPS.toString();
+        previousFrameTime = time;
+        ctx.font = "12px Verdana";
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillText(fpsSTRING, 0, 10);
+        ctx.fillText("FPS", 20, 10);
+        ctx.fillText(scoreString, canvas.width-20, 10);
+        if(gateY == canvas.height){
+            changeGate();
+            gateY = 0; 
+        }
+        if(ballY>= gateY && ballY <= gateY+60){
+            if(ballX >= gateX1 && ballX <= gateX1 + 40){
+                score += 1;
+                changeGate();
+                gateY = 0;
+            }
+            else if(ballX >= gateX2 && ballX <= gateX2 + 40){
+                score += 1;
+                changeGate();
+                gateY = 0;
+            }
+            else if(ballX >= gateX3 && ballX <= gateX3 + 40){
+                score += 1;
+                changeGate();
+                gateY = 0;
+            }
+        }
+        
+
+        drawGate(gateX1, gateY, currentGate1);
+
+        drawGate(gateX2, gateY, currentGate2);
+
+        drawGate(gateX3, gateY, currentGate3);
+
+        drawBall();
+        gateY = gateY + 1;
+
+        if (rightPressed && ballX + ballRadius < canvas.width) {
+            ballX += 4;
+        }
+        if (leftPressed && ballX - ballRadius > 0) {
+            ballX -= 4;
+        }
+
+        // if (upPressed && y - ballRadius > 0) {
+        //      -= 4;
+        // }
+
+        // if (downPressed && y + ballRadius < canvas.height) {
+        //     y += 4;
+        // }
+
+
+    }
+
+    requestAnimationFrame(draw);
+
+
+</script>
+
+</body>
+</html>

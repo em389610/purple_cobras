@@ -1,0 +1,47 @@
+.navbar-inverse {
+	background-color: #003300;
+	border: 0 none;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-inverse .navbar-header > a {
+	color: white;
+}
+
+.nav.navbar-nav.navbar-left li a{  /* Changes color of words on the navigation bar */
+	color:white;
+}
+
+.navbar-nav > li > .dropdown-menu { 
+	background-color: #003300; 
+}
+
+.navbar-inverse .navbar-text{
+	color:white;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: black;
+    background-image: none;
+}
+
+body{
+	padding-top: 70px;
+	padding-bottom: 100px;
+	background-color: #DFDFE9;
+}
+
+.jumbotron {
+	background-color: #001400;
+	color: white;
+	text-shadow:
+	1px 1px 0 #CCC,
+	2px 2px 0 #CCC,
+	3px 3px 0 #444,
+	4px 4px 0 #444,
+	5px 5px 0 #444,
+	6px 6px 0 #444;
+}

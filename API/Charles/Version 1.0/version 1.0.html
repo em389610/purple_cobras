@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gate Grabber</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+	
+</head>
+<body>
+<div id="visDiv"> </div>
+ 
+
+<div id="gameDiv"> 
+<canvas id="myCanvas" width="480" height="600"></canvas>
+<button type="button" id="pauseButton" class="ui inGame"onclick="pause()">Pause</button> 
+<button type="button" id="play" class="ui mainMenu" onclick="newGame()">Play!</button>
+<button type="button" id="howTo" class="ui mainMenu">How to Play</button>
+<img  id= "menuLogo" src = "Resources/MainMenu/logo.png" class="ui mainMenu">
+</div>
+
+<div id = "speedDiv">
+    <div id = "rate1Div" class = "speedView"   > </div>
+    <div id = "rate2Div" class = "speedView"   > </div>
+    <div id = "rate3Div" class = "speedView"   > </div>
+</div>
+
+<img  id= "AND00x" src = "Resources/Gates/and00x.png">
+<img  id= "AND0x0" src = "Resources/Gates/and0x0.png">
+<img  id= "AND0x1" src = "Resources/Gates/and0x1.png">
+<img  id= "AND01x" src = "Resources/Gates/and01x.png">
+<img  id= "AND1x0" src = "Resources/Gates/and1x0.png">
+<img  id= "AND1x1" src = "Resources/Gates/and1x1.png">
+<img  id= "AND10x" src = "Resources/Gates/and10x.png">
+<img  id= "AND11x" src = "Resources/Gates/and11x.png">
+<img  id= "OR00x" src = "Resources/Gates/or00x.png">
+<img  id= "OR0x0" src = "Resources/Gates/or0x0.png">
+<img  id= "OR0x1" src = "Resources/Gates/or0x1.png">
+<img  id= "OR01x" src = "Resources/Gates/or01x.png">
+<img  id= "OR1x0" src = "Resources/Gates/or1x0.png">
+<img  id= "OR1x1" src = "Resources/Gates/or1x1.png">
+<img  id= "OR10x" src = "Resources/Gates/or10x.png">
+<img  id= "OR11x" src = "Resources/Gates/or11x.png">
+
+<script src="http://www.d3plus.org/js/d3.js"></script>
+<script src="http://www.d3plus.org/js/d3plus.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="test.js"></script>
+<script src="GateGrabber.js"></script>
+
+
+
+</body>
+</html>
