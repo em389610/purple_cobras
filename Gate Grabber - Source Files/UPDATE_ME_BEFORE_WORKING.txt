@@ -1,9 +1,0 @@
-Please use this document to indicate to everyone else what you are working on when you are working on it.
-If you are planning on making changes to the application please write your initials, the date, the time, what you are working on, and push it to bitbucket before
-beginning your work so that we can prevent duplication of efforts. PLEASE ALWAYS SAVE YOUR CHANGES TO THE GAME IN A NEW VERSION OR SUB-VERSION.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Name  |   Date   |   Time   |  Features being changed
-Ryan    10/13      6:40        Photoshops/ gate needs function/ adding more gates
-Ryan    10/15      12:01a      sorry didnt get to the things above yet. Photoshops took a lot longer than i thought. gonna upload them now. let me know what you guys think. I like how they look but i'm not sure if it would be hard for people to make out the shape of the gates with the design i put on it. But if you guys like it i could do something similar to replace the ball. gonna try to get my coding portion in on friday and finish the photoshopping on the or gates. so feel free to work on whatever you guys feel neccesary and just keep updating this file to keep in touch. I'll just pick up where were at friday.
-Kevin   10/19       3:00PM      Added sound effects for collecting and missing gates. Was thinking about music and what not but I wanted your inputs as well.
